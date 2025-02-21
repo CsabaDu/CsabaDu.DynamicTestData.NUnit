@@ -23,7 +23,7 @@ public static class Extensions
 
         return string.IsNullOrEmpty(testMethodName) ?
             testCaseData.SetDescription(testCase)
-            : testCaseData.SetDescription(testCase).SetName(GetDisplayName(testMethodName, testData.TestCase));
+            : testCaseData.SetDescription(testCase).SetName(GetDisplayName(testMethodName, testCase));
     }
 
     /// <summary>
