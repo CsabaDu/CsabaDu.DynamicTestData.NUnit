@@ -7,8 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="_Tests\**" />
+    <EmbeddedResource Remove="_Tests\**" />
+    <None Remove="_Tests\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="CsabaDu.DynamicTestData" Version="1.0.9" />
     <PackageReference Include="NUnit" Version="4.3.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="_Tests\CsabaDu.DynamicTestData.NUnit.Tests.csproj" />
   </ItemGroup>
 
 </Project>
