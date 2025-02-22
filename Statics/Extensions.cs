@@ -16,10 +16,13 @@ public static class Extensions
     /// <returns>A TestCaseData object with the converted test data.</returns>
     public static TestCaseData ToTestCaseData(this ITestData testData, ArgsCode argsCode, string? testMethodName = null)
     {
-        TestCaseData testCaseData = argsCode.Defined(nameof(argsCode)) == ArgsCode.Properties ?
-            new(testData.ToArgs(argsCode)[1..])
-            : new(testData);
-        string testCase = testData.ToString()!;
+        TestCaseData testCaseData = argsCode switch
+        {
+            ArgsCode.Properties =>  new(testData.ToArgs(argsCode)[1..]),
+            ArgsCode.Instance =>  new(testData),
+            _ => throw argsCode.GetInvalidEnumArgumentException(nameof(argsCode)),
+        };
+        string testCase = testData.TestCase;
 
         return string.IsNullOrEmpty(testMethodName) ?
             testCaseData.SetDescription(testCase)
