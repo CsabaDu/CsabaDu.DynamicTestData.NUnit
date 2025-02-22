@@ -35,7 +35,5 @@ public static class Extensions
     /// <param name="testMethodName">Optional. The name of the test method.</param>
     /// <returns>A TestCaseData object with the converted test data and expected return value.</returns>
     public static TestCaseData ToTestCaseData<TStruct>(this ITestDataReturns<TStruct> testData, ArgsCode argsCode, string? testMethodName = null) where TStruct : struct
-    {
-        return (testData as ITestData).ToTestCaseData(argsCode, testMethodName).Returns(testData.Expected);
-    }
+    => (testData as ITestData).ToTestCaseData(argsCode, testMethodName).Returns(testData.Expected);
 }
