@@ -12,7 +12,8 @@ public abstract class DynamicTestCaseDataSource(ArgsCode argsCode) : DynamicData
     /// <param name="arg1">The first argument.</param>
     /// <returns>A TestCaseData instance.</returns>
     public TestCaseData TestDataToTestCaseData<T1>(string definition, string expected, T1? arg1, string? testMethodName = null)
-    => new TestData<T1>(definition, expected, arg1).ToTestCaseData(ArgsCode, testMethodName);
+    => new TestData<T1>(definition, expected, arg1)
+        .ToTestCaseData(ArgsCode, testMethodName);
 
     /// <summary>
     /// Converts test data to a TestCaseData instance.
@@ -25,7 +26,8 @@ public abstract class DynamicTestCaseDataSource(ArgsCode argsCode) : DynamicData
     /// <param name="arg2">The second argument.</param>
     /// <returns>A TestCaseData instance.</returns>
     public TestCaseData TestDataToTestCaseData<T1, T2>(string definition, string expected, T1? arg1, T2? arg2, string? testMethodName = null)
-    => new TestData<T1, T2>(definition, expected, arg1, arg2).ToTestCaseData(ArgsCode, testMethodName);
+    => new TestData<T1, T2>(definition, expected, arg1, arg2)
+        .ToTestCaseData(ArgsCode, testMethodName);
 
     /// <summary>
     /// Converts test data to a TestCaseData instance.
@@ -39,7 +41,8 @@ public abstract class DynamicTestCaseDataSource(ArgsCode argsCode) : DynamicData
     /// <param name="arg3">The third argument.</param>
     /// <returns>A TestCaseData instance.</returns>
     public TestCaseData TestDataToTestCaseData<T1, T2, T3>(string definition, string expected, T1? arg1, T2? arg2, T3? arg3, string? testMethodName = null)
-    => new TestData<T1, T2, T3>(definition, expected, arg1, arg2, arg3).ToTestCaseData(ArgsCode, testMethodName);
+    => new TestData<T1, T2, T3>(definition, expected, arg1, arg2, arg3)
+        .ToTestCaseData(ArgsCode, testMethodName);
 
     /// <summary>
     /// Converts test data to a TestCaseData instance.
@@ -56,7 +59,8 @@ public abstract class DynamicTestCaseDataSource(ArgsCode argsCode) : DynamicData
     /// <param name="arg4">The fourth argument.</param>
     /// <returns>A TestCaseData instance.</returns>
     public TestCaseData TestDataToTestCaseData<T1, T2, T3, T4>(string definition, string expected, T1? arg1, T2? arg2, T3? arg3, T4? arg4, string? testMethodName = null)
-    => new TestData<T1, T2, T3, T4>(definition, expected, arg1, arg2, arg3, arg4).ToTestCaseData(ArgsCode, testMethodName);
+    => new TestData<T1, T2, T3, T4>(definition, expected, arg1, arg2, arg3, arg4)
+        .ToTestCaseData(ArgsCode, testMethodName);
 
     /// <summary>
     /// Converts test data to a TestCaseData instance.
@@ -75,7 +79,8 @@ public abstract class DynamicTestCaseDataSource(ArgsCode argsCode) : DynamicData
     /// <param name="arg5">The fifth argument.</param>
     /// <returns>A TestCaseData instance.</returns>
     public TestCaseData TestDataToTestCaseData<T1, T2, T3, T4, T5>(string definition, string expected, T1? arg1, T2? arg2, T3? arg3, T4? arg4, T5? arg5, string? testMethodName = null)
-    => new TestData<T1, T2, T3, T4, T5>(definition, expected, arg1, arg2, arg3, arg4, arg5).ToTestCaseData(ArgsCode, testMethodName);
+    => new TestData<T1, T2, T3, T4, T5>(definition, expected, arg1, arg2, arg3, arg4, arg5)
+        .ToTestCaseData(ArgsCode, testMethodName);
 
     /// <summary>
     /// Converts test data to a TestCaseData instance.
@@ -96,7 +101,8 @@ public abstract class DynamicTestCaseDataSource(ArgsCode argsCode) : DynamicData
     /// <param name="arg6">The sixth argument.</param>
     /// <returns>A TestCaseData instance.</returns>
     public TestCaseData TestDataToTestCaseData<T1, T2, T3, T4, T5, T6>(string definition, string expected, T1? arg1, T2? arg2, T3? arg3, T4? arg4, T5? arg5, T6? arg6, string? testMethodName = null)
-    => new TestData<T1, T2, T3, T4, T5, T6>(definition, expected, arg1, arg2, arg3, arg4, arg5, arg6).ToTestCaseData(ArgsCode, testMethodName);
+    => new TestData<T1, T2, T3, T4, T5, T6>(definition, expected, arg1, arg2, arg3, arg4, arg5, arg6)
+        .ToTestCaseData(ArgsCode, testMethodName);
 
     /// <summary>
     /// Converts test data to a TestCaseData instance.
@@ -119,7 +125,8 @@ public abstract class DynamicTestCaseDataSource(ArgsCode argsCode) : DynamicData
     /// <param name="arg7">The seventh argument.</param>
     /// <returns>A TestCaseData instance.</returns>
     public TestCaseData TestDataToTestCaseData<T1, T2, T3, T4, T5, T6, T7>(string definition, string expected, T1? arg1, T2? arg2, T3? arg3, T4? arg4, T5? arg5, T6? arg6, T7? arg7, string? testMethodName = null)
-    => new TestData<T1, T2, T3, T4, T5, T6, T7>(definition, expected, arg1, arg2, arg3, arg4, arg5, arg6, arg7).ToTestCaseData(ArgsCode, testMethodName);
+    => new TestData<T1, T2, T3, T4, T5, T6, T7>(definition, expected, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
+        .ToTestCaseData(ArgsCode, testMethodName);
 
     /// <summary>
     /// Converts test data to a TestCaseData instance.
@@ -144,7 +151,8 @@ public abstract class DynamicTestCaseDataSource(ArgsCode argsCode) : DynamicData
     /// <param name="arg8">The eighth argument.</param>
     /// <returns>A TestCaseData instance.</returns>
     public TestCaseData TestDataToTestCaseData<T1, T2, T3, T4, T5, T6, T7, T8>(string definition, string expected, T1? arg1, T2? arg2, T3? arg3, T4? arg4, T5? arg5, T6? arg6, T7? arg7, T8? arg8, string? testMethodName = null)
-    => new TestData<T1, T2, T3, T4, T5, T6, T7, T8>(definition, expected, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8).ToTestCaseData(ArgsCode, testMethodName);
+    => new TestData<T1, T2, T3, T4, T5, T6, T7, T8>(definition, expected, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)
+        .ToTestCaseData(ArgsCode, testMethodName);
 
     /// <summary>
     /// Converts test data to a TestCaseData instance.
@@ -171,7 +179,8 @@ public abstract class DynamicTestCaseDataSource(ArgsCode argsCode) : DynamicData
     /// <param name="arg9">The ninth argument.</param>
     /// <returns>A TestCaseData instance.</returns>
     public TestCaseData TestDataToTestCaseData<T1, T2, T3, T4, T5, T6, T7, T8, T9>(string definition, string expected, T1? arg1, T2? arg2, T3? arg3, T4? arg4, T5? arg5, T6? arg6, T7? arg7, T8? arg8, T9? arg9, string? testMethodName = null)
-    => new TestData<T1, T2, T3, T4, T5, T6, T7, T8, T9>(definition, expected, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9).ToTestCaseData(ArgsCode, testMethodName);
+    => new TestData<T1, T2, T3, T4, T5, T6, T7, T8, T9>(definition, expected, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9)
+        .ToTestCaseData(ArgsCode, testMethodName);
     #endregion
 
     #region TestDataReturnsToTestCaseData
@@ -185,7 +194,8 @@ public abstract class DynamicTestCaseDataSource(ArgsCode argsCode) : DynamicData
     /// <param name="arg1">The first argument.</param>
     /// <returns>A TestCaseData instance.</returns>
     public TestCaseData TestDataReturnsToTestCaseData<TStruct, T1>(string definition, TStruct expected, T1? arg1, string? testMethodName = null) where TStruct : struct
-    => new TestDataReturns<TStruct, T1>(definition, expected, arg1).ToTestCaseData(ArgsCode, testMethodName);
+    => new TestDataReturns<TStruct, T1>(definition, expected, arg1)
+        .ToTestCaseData(ArgsCode, testMethodName);
 
     /// <summary>
     /// Converts test data to a TestCaseData instance for a test that expects a struct to assert.
@@ -199,7 +209,8 @@ public abstract class DynamicTestCaseDataSource(ArgsCode argsCode) : DynamicData
     /// <param name="arg2">The second argument.</param>
     /// <returns>A TestCaseData instance.</returns>
     public TestCaseData TestDataReturnsToTestCaseData<TStruct, T1, T2>(string definition, TStruct expected, T1? arg1, T2? arg2, string? testMethodName = null) where TStruct : struct
-    => new TestDataReturns<TStruct, T1, T2>(definition, expected, arg1, arg2).ToTestCaseData(ArgsCode, testMethodName);
+    => new TestDataReturns<TStruct, T1, T2>(definition, expected, arg1, arg2)
+        .ToTestCaseData(ArgsCode, testMethodName);
 
     /// <summary>
     /// Converts test data to a TestCaseData instance for a test that expects a struct to assert.
@@ -215,7 +226,8 @@ public abstract class DynamicTestCaseDataSource(ArgsCode argsCode) : DynamicData
     /// <param name="arg3">The third argument.</param>
     /// <returns>A TestCaseData instance.</returns>
     public TestCaseData TestDataReturnsToTestCaseData<TStruct, T1, T2, T3>(string definition, TStruct expected, T1? arg1, T2? arg2, T3? arg3, string? testMethodName = null) where TStruct : struct
-    => new TestDataReturns<TStruct, T1, T2, T3>(definition, expected, arg1, arg2, arg3).ToTestCaseData(ArgsCode, testMethodName);
+    => new TestDataReturns<TStruct, T1, T2, T3>(definition, expected, arg1, arg2, arg3)
+        .ToTestCaseData(ArgsCode, testMethodName);
 
     /// <summary>
     /// Converts test data to a TestCaseData instance for a test that expects a struct to assert.
@@ -233,7 +245,8 @@ public abstract class DynamicTestCaseDataSource(ArgsCode argsCode) : DynamicData
     /// <param name="arg4">The fourth argument.</param>
     /// <returns>A TestCaseData instance.</returns>
     public TestCaseData TestDataReturnsToTestCaseData<TStruct, T1, T2, T3, T4>(string definition, TStruct expected, T1? arg1, T2? arg2, T3? arg3, T4? arg4, string? testMethodName = null) where TStruct : struct
-    => new TestDataReturns<TStruct, T1, T2, T3, T4>(definition, expected, arg1, arg2, arg3, arg4).ToTestCaseData(ArgsCode, testMethodName);
+    => new TestDataReturns<TStruct, T1, T2, T3, T4>(definition, expected, arg1, arg2, arg3, arg4)
+        .ToTestCaseData(ArgsCode, testMethodName);
 
     /// <summary>
     /// Converts test data to a TestCaseData instance for a test that expects a struct to assert.
@@ -253,7 +266,8 @@ public abstract class DynamicTestCaseDataSource(ArgsCode argsCode) : DynamicData
     /// <param name="arg5">The fifth argument.</param>
     /// <returns>A TestCaseData instance.</returns>
     public TestCaseData TestDataReturnsToTestCaseData<TStruct, T1, T2, T3, T4, T5>(string definition, TStruct expected, T1? arg1, T2? arg2, T3? arg3, T4? arg4, T5? arg5, string? testMethodName = null) where TStruct : struct
-    => new TestDataReturns<TStruct, T1, T2, T3, T4, T5>(definition, expected, arg1, arg2, arg3, arg4, arg5).ToTestCaseData(ArgsCode, testMethodName);
+    => new TestDataReturns<TStruct, T1, T2, T3, T4, T5>(definition, expected, arg1, arg2, arg3, arg4, arg5)
+        .ToTestCaseData(ArgsCode, testMethodName);
 
     /// <summary>
     /// Converts test data to a TestCaseData instance for a test that expects a struct to assert.
@@ -275,7 +289,8 @@ public abstract class DynamicTestCaseDataSource(ArgsCode argsCode) : DynamicData
     /// <param name="arg6">The sixth argument.</param>
     /// <returns>A TestCaseData instance.</returns>
     public TestCaseData TestDataReturnsToTestCaseData<TStruct, T1, T2, T3, T4, T5, T6>(string definition, TStruct expected, T1? arg1, T2? arg2, T3? arg3, T4? arg4, T5? arg5, T6? args6, string? testMethodName = null) where TStruct : struct
-    => new TestDataReturns<TStruct, T1, T2, T3, T4, T5, T6>(definition, expected, arg1, arg2, arg3, arg4, arg5, args6).ToTestCaseData(ArgsCode, testMethodName);
+    => new TestDataReturns<TStruct, T1, T2, T3, T4, T5, T6>(definition, expected, arg1, arg2, arg3, arg4, arg5, args6)
+        .ToTestCaseData(ArgsCode, testMethodName);
 
     /// <summary>
     /// Converts test data to a TestCaseData instance for a test that expects a struct to assert.
@@ -299,7 +314,8 @@ public abstract class DynamicTestCaseDataSource(ArgsCode argsCode) : DynamicData
     /// <param name="arg7">The seventh argument.</param>
     /// <returns>A TestCaseData instance.</returns>
     public TestCaseData TestDataReturnsToTestCaseData<TStruct, T1, T2, T3, T4, T5, T6, T7>(string definition, TStruct expected, T1? arg1, T2? arg2, T3? arg3, T4? arg4, T5? arg5, T6? arg6, T7? arg7, string? testMethodName = null) where TStruct : struct
-    => new TestDataReturns<TStruct, T1, T2, T3, T4, T5, T6, T7>(definition, expected, arg1, arg2, arg3, arg4, arg5, arg6, arg7).ToTestCaseData(ArgsCode, testMethodName);
+    => new TestDataReturns<TStruct, T1, T2, T3, T4, T5, T6, T7>(definition, expected, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
+        .ToTestCaseData(ArgsCode, testMethodName);
 
     /// <summary>
     /// Converts test data to a TestCaseData instance for a test that expects a struct to assert.
@@ -325,7 +341,8 @@ public abstract class DynamicTestCaseDataSource(ArgsCode argsCode) : DynamicData
     /// <param name="arg8">The eighth argument.</param>
     /// <returns>A TestCaseData instance.</returns>
     public TestCaseData TestDataReturnsToTestCaseData<TStruct, T1, T2, T3, T4, T5, T6, T7, T8>(string definition, TStruct expected, T1? arg1, T2? arg2, T3? arg3, T4? arg4, T5? arg5, T6? arg6, T7? arg7, T8? arg8, string? testMethodName = null) where TStruct : struct
-    => new TestDataReturns<TStruct, T1, T2, T3, T4, T5, T6, T7, T8>(definition, expected, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8).ToTestCaseData(ArgsCode, testMethodName);
+    => new TestDataReturns<TStruct, T1, T2, T3, T4, T5, T6, T7, T8>(definition, expected, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)
+        .ToTestCaseData(ArgsCode, testMethodName);
 
     /// <summary>
     /// Converts test data to a TestCaseData instance for a test that expects a struct to assert.
@@ -353,7 +370,8 @@ public abstract class DynamicTestCaseDataSource(ArgsCode argsCode) : DynamicData
     /// <param name="arg9">The ninth argument.</param>
     /// <returns>A TestCaseData instance.</returns>
     public TestCaseData TestDataReturnsToTestCaseData<TStruct, T1, T2, T3, T4, T5, T6, T7, T8, T9>(string definition, TStruct expected, T1? arg1, T2? arg2, T3? arg3, T4? arg4, T5? arg5, T6? arg6, T7? arg7, T8? arg8, T9? arg9, string? testMethodName = null) where TStruct : struct
-    => new TestDataReturns<TStruct, T1, T2, T3, T4, T5, T6, T7, T8, T9>(definition, expected, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9).ToTestCaseData(ArgsCode, testMethodName);
+    => new TestDataReturns<TStruct, T1, T2, T3, T4, T5, T6, T7, T8, T9>(definition, expected, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9)
+        .ToTestCaseData(ArgsCode, testMethodName);
     #endregion
 
     #region TestDataThrowsToTestCaseData
@@ -367,7 +385,8 @@ public abstract class DynamicTestCaseDataSource(ArgsCode argsCode) : DynamicData
     /// <param name="arg1">The first argument.</param>
     /// <returns>A TestCaseData instance.</returns>
     public TestCaseData TestDataThrowsToTestCaseData<TException, T1>(string definition, TException expected, T1? arg1, string? testMethodName = null) where TException : Exception
-    => new TestDataThrows<TException, T1>(definition, expected, arg1).ToTestCaseData(ArgsCode, testMethodName);
+    => new TestDataThrows<TException, T1>(definition, expected, arg1)
+        .ToTestCaseData(ArgsCode, testMethodName);
 
     /// <summary>
     /// Converts test data to a TestCaseData for a test that throws an exception.
@@ -381,7 +400,8 @@ public abstract class DynamicTestCaseDataSource(ArgsCode argsCode) : DynamicData
     /// <param name="arg2">The second argument.</param>
     /// <returns>A TestCaseData instance.</returns>
     public TestCaseData TestDataThrowsToTestCaseData<TException, T1, T2>(string definition, TException expected, T1? arg1, T2? arg2, string? testMethodName = null) where TException : Exception
-    => new TestDataThrows<TException, T1, T2>(definition, expected, arg1, arg2).ToTestCaseData(ArgsCode, testMethodName);
+    => new TestDataThrows<TException, T1, T2>(definition, expected, arg1, arg2)
+        .ToTestCaseData(ArgsCode, testMethodName);
 
     /// <summary>
     /// Converts test data to a TestCaseData for a test that throws an exception.
@@ -397,7 +417,8 @@ public abstract class DynamicTestCaseDataSource(ArgsCode argsCode) : DynamicData
     /// <param name="arg3">The third argument.</param>
     /// <returns>A TestCaseData instance.</returns>
     public TestCaseData TestDataThrowsToTestCaseData<TException, T1, T2, T3>(string definition, TException expected, T1? arg1, T2? arg2, T3? arg3, string? testMethodName = null) where TException : Exception
-    => new TestDataThrows<TException, T1, T2, T3>(definition, expected, arg1, arg2, arg3).ToTestCaseData(ArgsCode, testMethodName);
+    => new TestDataThrows<TException, T1, T2, T3>(definition, expected, arg1, arg2, arg3)
+        .ToTestCaseData(ArgsCode, testMethodName);
 
     /// <summary>
     /// Converts test data to a TestCaseData for a test that throws an exception.
@@ -415,7 +436,8 @@ public abstract class DynamicTestCaseDataSource(ArgsCode argsCode) : DynamicData
     /// <param name="arg4">The fourth argument.</param>
     /// <returns>A TestCaseData instance.</returns>
     public TestCaseData TestDataThrowsToTestCaseData<TException, T1, T2, T3, T4>(string definition, TException expected, T1? arg1, T2? arg2, T3? arg3, T4? arg4, string? testMethodName = null) where TException : Exception
-    => new TestDataThrows<TException, T1, T2, T3, T4>(definition, expected, arg1, arg2, arg3, arg4).ToTestCaseData(ArgsCode, testMethodName);
+    => new TestDataThrows<TException, T1, T2, T3, T4>(definition, expected, arg1, arg2, arg3, arg4)
+        .ToTestCaseData(ArgsCode, testMethodName);
 
     /// <summary>
     /// Converts test data to a TestCaseData for a test that throws an exception.
@@ -435,7 +457,8 @@ public abstract class DynamicTestCaseDataSource(ArgsCode argsCode) : DynamicData
     /// <param name="arg5">The fifth argument.</param>
     /// <returns>A TestCaseData instance.</returns>
     public TestCaseData TestDataThrowsToTestCaseData<TException, T1, T2, T3, T4, T5>(string definition, TException expected, T1? arg1, T2? arg2, T3? arg3, T4? arg4, T5? arg5, string? testMethodName = null) where TException : Exception
-    => new TestDataThrows<TException, T1, T2, T3, T4, T5>(definition, expected, arg1, arg2, arg3, arg4, arg5).ToTestCaseData(ArgsCode, testMethodName);
+    => new TestDataThrows<TException, T1, T2, T3, T4, T5>(definition, expected, arg1, arg2, arg3, arg4, arg5)
+        .ToTestCaseData(ArgsCode, testMethodName);
 
     /// <summary>
     /// Converts test data to a TestCaseData for a test that throws an exception.
@@ -457,7 +480,8 @@ public abstract class DynamicTestCaseDataSource(ArgsCode argsCode) : DynamicData
     /// <param name="arg6">The sixth argument.</param>
     /// <returns>A TestCaseData instance.</returns>
     public TestCaseData TestDataThrowsToTestCaseData<TException, T1, T2, T3, T4, T5, T6>(string definition, TException expected, T1? arg1, T2? arg2, T3? arg3, T4? arg4, T5? arg5, T6? arg6, string? testMethodName = null) where TException : Exception
-    => new TestDataThrows<TException, T1, T2, T3, T4, T5, T6>(definition, expected, arg1, arg2, arg3, arg4, arg5, arg6).ToTestCaseData(ArgsCode, testMethodName);
+    => new TestDataThrows<TException, T1, T2, T3, T4, T5, T6>(definition, expected, arg1, arg2, arg3, arg4, arg5, arg6)
+        .ToTestCaseData(ArgsCode, testMethodName);
 
     /// <summary>
     /// Converts test data to a TestCaseData for a test that throws an exception.
@@ -481,7 +505,8 @@ public abstract class DynamicTestCaseDataSource(ArgsCode argsCode) : DynamicData
     /// <param name="arg7">The seventh argument.</param>
     /// <returns>A TestCaseData instance.</returns>
     public TestCaseData TestDataThrowsToTestCaseData<TException, T1, T2, T3, T4, T5, T6, T7>(string definition, TException expected, T1? arg1, T2? arg2, T3? arg3, T4? arg4, T5? arg5, T6? arg6, T7? arg7, string? testMethodName = null) where TException : Exception
-    => new TestDataThrows<TException, T1, T2, T3, T4, T5, T6, T7>(definition, expected, arg1, arg2, arg3, arg4, arg5, arg6, arg7).ToTestCaseData(ArgsCode, testMethodName);
+    => new TestDataThrows<TException, T1, T2, T3, T4, T5, T6, T7>(definition, expected, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
+        .ToTestCaseData(ArgsCode, testMethodName);
 
     /// <summary>
     /// Converts test data to a TestCaseData for a test that throws an exception.
@@ -507,7 +532,8 @@ public abstract class DynamicTestCaseDataSource(ArgsCode argsCode) : DynamicData
     /// <param name="arg8">The eighth argument.</param>
     /// <returns>A TestCaseData instance.</returns>
     public TestCaseData TestDataThrowsToTestCaseData<TException, T1, T2, T3, T4, T5, T6, T7, T8>(string definition, TException expected, T1? arg1, T2? arg2, T3? arg3, T4? arg4, T5? arg5, T6? arg6, T7? arg7, T8? arg8, string? testMethodName = null) where TException : Exception
-    => new TestDataThrows<TException, T1, T2, T3, T4, T5, T6, T7, T8>(definition, expected, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8).ToTestCaseData(ArgsCode, testMethodName);
+    => new TestDataThrows<TException, T1, T2, T3, T4, T5, T6, T7, T8>(definition, expected, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)
+        .ToTestCaseData(ArgsCode, testMethodName);
 
     /// <summary>
     /// Converts test data to a TestCaseData for a test that throws an exception.
@@ -535,6 +561,7 @@ public abstract class DynamicTestCaseDataSource(ArgsCode argsCode) : DynamicData
     /// <param name="arg9">The ninth argument.</param>
     /// <returns>A TestCaseData instance.</returns>
     public TestCaseData TestDataThrowsToTestCaseData<TException, T1, T2, T3, T4, T5, T6, T7, T8, T9>(string definition, TException expected, T1? arg1, T2? arg2, T3? arg3, T4? arg4, T5? arg5, T6? arg6, T7? arg7, T8? arg8, T9? arg9, string? testMethodName = null) where TException : Exception
-    => new TestDataThrows<TException, T1, T2, T3, T4, T5, T6, T7, T8, T9>(definition, expected, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9).ToTestCaseData(ArgsCode, testMethodName);
+    => new TestDataThrows<TException, T1, T2, T3, T4, T5, T6, T7, T8, T9>(definition, expected, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9)
+        .ToTestCaseData(ArgsCode, testMethodName);
     #endregion
 }
