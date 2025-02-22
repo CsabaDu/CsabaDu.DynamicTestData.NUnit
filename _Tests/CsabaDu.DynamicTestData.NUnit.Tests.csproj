@@ -30,6 +30,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CsabaDu.DynamicTestData.NUnit.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="UnitTests\DynamicDataSources\" />
   </ItemGroup>
 

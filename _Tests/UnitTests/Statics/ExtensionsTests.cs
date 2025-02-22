@@ -1,4 +1,5 @@
-﻿namespace CsabaDu.DynamicTestData.NUnit.Tests.UnitTests.Statics;
+﻿
+namespace CsabaDu.DynamicTestData.NUnit.Tests.UnitTests.Statics;
 
 public sealed class ExtensionsTests
 {
@@ -9,8 +10,16 @@ public sealed class ExtensionsTests
     }
 
     [Fact]
-    public void ToTestCaseData_invalidArg_ArgsCode_throws()
+    public void ToTestCaseData_invalidArg_ArgsCode_throwsInvalidEnumArgumentException()
     {
+        string expectedParamName = "argsCode";
+
+        // Act
+        //void attempt() => _ = _sut.Add(InvalidArgsCode, Parameter);
+
+        // Assert
+        var actual = Assert.Throws<InvalidEnumArgumentException>(attempt);
+        Assert.Equal(expectedParamName, actual.ParamName);
     }
 
     [Fact]
