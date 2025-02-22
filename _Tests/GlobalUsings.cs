@@ -1,0 +1,14 @@
+﻿global using CsabaDu.DynamicTestData.NUnit.Tests.TestParameters;
+global using static CsabaDu.DynamicTestData.NUnit.Tests.TestParameters.Args;
+global using static CsabaDu.DynamicTestData.NUnit.Tests.TestParameters.ArgsArrays;
+global using static CsabaDu.DynamicTestData.NUnit.Tests.TestParameters.ExtensionsArgsArrays;
+global using static CsabaDu.DynamicTestData.NUnit.Tests.TestParameters.Params;
+global using static CsabaDu.DynamicTestData.NUnit.Tests.TestParameters.TestDataArgs;
+global using static CsabaDu.DynamicTestData.NUnit.Tests.TestParameters.TestDataArgsArrays;
+global using static CsabaDu.DynamicTestData.NUnit.Tests.TestParameters.TestDataReturnsArgs;
+global using static CsabaDu.DynamicTestData.NUnit.Tests.TestParameters.TestDataThrowsArgs;
+global using CsabaDu.DynamicTestData.NUnit.Tests.DummyTypes;
+global using CsabaDu.DynamicTestData.DynamicDataSources;
+global using CsabaDu.DynamicTestData.Statics;
+global using CsabaDu.DynamicTestData.TestDataTypes;
+global using CsabaDu.DynamicTestData.TestDataTypes.Interfaces;
