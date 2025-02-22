@@ -14,7 +14,7 @@ public sealed class ExtensionsTests
     }
 
     [Fact]
-    public void ToTestCaseData_validArg_testMethodName_returnsExpected()
+    public void ToTestCaseData_arg_testMethodName_returnsExpected()
     {
     }
 }

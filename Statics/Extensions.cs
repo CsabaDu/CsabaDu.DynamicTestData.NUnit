@@ -15,7 +15,7 @@ public static class Extensions
     /// <param name="argsCode">The ArgsCode to determine the conversion method.</param>
     /// <param name="testMethodName">Optional. The name of the test method.</param>
     /// <returns>A TestCaseData object with the converted test data.</returns>
-    public static TestCaseData ToTestCaseData(this ITestData testData, ArgsCode argsCode, string? testMethodName = null)
+    public static TestCaseData ToTestCaseData(this TestData testData, ArgsCode argsCode, string? testMethodName = null)
     {
         TestCaseData testCaseData = argsCode switch
         {
@@ -38,7 +38,7 @@ public static class Extensions
     /// <param name="argsCode">The ArgsCode to determine the conversion method.</param>
     /// <param name="testMethodName">Optional. The name of the test method.</param>
     /// <returns>A TestCaseData object with the converted test data and expected return value.</returns>
-    public static TestCaseData ToTestCaseData<TStruct>(this ITestDataReturns<TStruct> testData, ArgsCode argsCode, string? testMethodName = null) where TStruct : struct
-    => (testData as ITestData).ToTestCaseData(argsCode, testMethodName).Returns(testData.Expected);
+    public static TestCaseData ToTestCaseData<TStruct>(this TestDataReturns<TStruct> testData, ArgsCode argsCode, string? testMethodName = null) where TStruct : struct
+    => (testData as TestData).ToTestCaseData(argsCode, testMethodName).Returns(testData.Expected);
     #endregion
 }

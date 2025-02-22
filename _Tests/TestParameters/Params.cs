@@ -59,23 +59,23 @@ internal sealed class Params
 
     public static readonly ArgsCode InvalidArgsCode = (ArgsCode)Enum.GetNames<ArgsCode>().Length;
 
-    ///// <summary>
-    ///// A const instance of <see cref="TestDoubles.TestDataChild"/> used in tests, initialized with actual definition, result, and exit mode.
-    ///// </summary>
-    //public static readonly TestDataChild TestDataChildInstance
-    //    = new(ActualDefinition, null, ExpectedString);
+    /// <summary>
+    /// A const instance of <see cref="TestDoubles.TestDataChild"/> used in tests, initialized with actual definition, result, and exit mode.
+    /// </summary>
+    public static readonly TestDataChild TestDataChildInstance
+        = new(ActualDefinition, null, ExpectedString);
 
-    ///// <summary>
-    ///// A const instance of <see cref="TestDataReturnsChildInstance<DummyEnum>"/> used in tests, initialized with actual definition.
-    ///// </summary>
-    //public static readonly TestDataReturnsChild<DummyEnum> TestDataReturnsChildInstance
-    //    = new(ActualDefinition, DummyEnumTestValue);
+    /// <summary>
+    /// A const instance of <see cref="TestDataReturnsChildInstance<DummyEnum>"/> used in tests, initialized with actual definition.
+    /// </summary>
+    public static readonly TestDataReturnsChild<DummyEnum> TestDataReturnsChildInstance
+        = new(ActualDefinition, DummyEnumTestValue);
 
-    ///// <summary>
-    ///// A const instance of <see cref="TestDataThrowsChildInstance"/> used in tests, initialized with actual definition, parameter, and error message.
-    ///// </summary>
-    //public static readonly TestDataThrowsChild<DummyException> TestDataThrowsChildInstance
-    //    = new(ActualDefinition, DummyExceptionInstance/*, Parameter, ErrorMessage*/);
+    /// <summary>
+    /// A const instance of <see cref="TestDataThrowsChildInstance"/> used in tests, initialized with actual definition, parameter, and error message.
+    /// </summary>
+    public static readonly TestDataThrowsChild<DummyException> TestDataThrowsChildInstance
+        = new(ActualDefinition, DummyExceptionInstance/*, Parameter, ErrorMessage*/);
 
     /// <summary>
     /// Generates a test case string by combining the definition and exit mode result.
