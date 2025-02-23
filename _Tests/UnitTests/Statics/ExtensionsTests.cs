@@ -1,26 +1,25 @@
 ﻿using CsabaDu.DynamicTestData.NUnit.Tests.TheoryDataSources;
-using CsabaDu.DynamicTestData.TestDataTypes;
 using static CsabaDu.DynamicTestData.NUnit.Tests.TheoryDataSources.ExtensionsTheoryData;
 
 namespace CsabaDu.DynamicTestData.NUnit.Tests.UnitTests.Statics;
 
 public sealed class ExtensionsTests
 {
-    private const string ParamName = "argsCode";
+    private TestData _sut;
 
     #region ToTestCaseData Tests
     [Fact]
     public void ToTestCaseData_invalidArg_ArgsCode_throwsInvalidEnumArgumentException()
     {
         // Arrange
-        TestData sut = TestDataChildInstance;
-
+        _sut = TestDataChildInstance;
+        string expectedParamName = "argsCode";
         // Act
-        void attempt() => _ = sut.ToTestCaseData(InvalidArgsCode);
+        void attempt() => _ = _sut.ToTestCaseData(InvalidArgsCode);
 
         // Assert
         var actual = Xunit.Assert.Throws<InvalidEnumArgumentException>(attempt);
-        Xunit.Assert.Equal(ParamName, actual.ParamName);
+        Xunit.Assert.Equal(expectedParamName, actual.ParamName);
     }
 
     [Xunit.Theory, MemberData(nameof(ToTestCaseDataTheoryData), MemberType = typeof(ExtensionsTheoryData))]
@@ -40,11 +39,11 @@ public sealed class ExtensionsTests
     public void ToTestCaseData_arg_testMethodName_returnsExpected(string testMethodName, bool expected)
     {
         // Arrange
-        TestData sut = TestDataChildInstance;
-        string displayName = DynamicDataSource.GetDisplayName(testMethodName, sut.TestCase);
+        _sut = TestDataChildInstance;
+        string displayName = DynamicDataSource.GetDisplayName(testMethodName, _sut.TestCase);
 
         // Act
-        TestCaseData testCaseData = sut.ToTestCaseData(default, testMethodName);
+        TestCaseData testCaseData = _sut.ToTestCaseData(default, testMethodName);
         var actual = testCaseData.TestName == displayName;
 
         // Assert
@@ -54,7 +53,7 @@ public sealed class ExtensionsTests
 
     #region ToTestCaseData<TStruct> Tests
     [Fact]
-    public void ToTestCaseDataTStruct__returnsExpected()
+    public void ToTestCaseData_generic_TStruct_returnsExpected()
     {
         // Arrange
         TestDataReturns<DummyEnum> sut = TestDataReturnsChildInstance;

@@ -9,7 +9,7 @@ public static class Extensions
 {
     #region TestCaseData
     /// <summary>
-    /// Converts an instance of ITestData to TestCaseData.
+    /// Converts an instance of TestData to TestCaseData.
     /// </summary>
     /// <param name="testData">The test data to convert.</param>
     /// <param name="argsCode">The ArgsCode to determine the conversion method.</param>
@@ -31,7 +31,7 @@ public static class Extensions
     }
 
     /// <summary>
-    /// Converts an instance of ITestDataReturns<TStruct> to TestCaseData.
+    /// Converts an instance of TestDataReturns<TStruct> to TestCaseData.
     /// </summary>
     /// <typeparam name="TStruct">The type of the expected return struct value.</typeparam>
     /// <param name="testData">The test data to convert.</param>
