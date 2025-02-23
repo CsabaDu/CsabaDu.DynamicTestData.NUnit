@@ -1,4 +1,5 @@
 ﻿using CsabaDu.DynamicTestData.NUnit.Tests.TheoryDataSources;
+using CsabaDu.DynamicTestData.TestDataTypes;
 using static CsabaDu.DynamicTestData.NUnit.Tests.TheoryDataSources.ExtensionsTheoryData;
 
 namespace CsabaDu.DynamicTestData.NUnit.Tests.UnitTests.Statics;
@@ -7,6 +8,7 @@ public sealed class ExtensionsTests
 {
     private const string ParamName = "argsCode";
 
+    #region ToTestCaseData Tests
     [Fact]
     public void ToTestCaseData_invalidArg_ArgsCode_throwsInvalidEnumArgumentException()
     {
@@ -48,4 +50,20 @@ public sealed class ExtensionsTests
         // Assert
         Xunit.Assert.Equal(expected, actual);
     }
+    #endregion
+
+    #region ToTestCaseData<TStruct> Tests
+    [Fact]
+    public void ToTestCaseDataTStruct__returnsExpected()
+    {
+        // Arrange
+        TestDataReturns<DummyEnum> sut = TestDataReturnsChildInstance;
+
+        // Act
+        var actual = sut.ToTestCaseData(default);
+
+        // Assert
+        Xunit.Assert.Equal(sut.Expected, actual.ExpectedResult);
+    }
+    #endregion
 }
