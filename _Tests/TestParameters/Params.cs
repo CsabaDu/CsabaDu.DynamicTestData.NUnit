@@ -5,6 +5,8 @@
 /// </summary>
 internal sealed class Params
 {
+    public const string TestMethodName = "TestMethod";
+
     /// <summary>
     /// A constant string parameter.
     /// </summary>
