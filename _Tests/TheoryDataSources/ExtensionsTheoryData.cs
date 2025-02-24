@@ -1,6 +1,4 @@
-﻿using CsabaDu.DynamicTestData.NUnit.Tests.TestParameters;
-
-namespace CsabaDu.DynamicTestData.NUnit.Tests.TheoryDataSources;
+﻿namespace CsabaDu.DynamicTestData.NUnit.Tests.TheoryDataSources;
 
 public sealed class ExtensionsTheoryData
 {
