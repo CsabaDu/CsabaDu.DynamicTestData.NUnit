@@ -27,7 +27,7 @@ public sealed class ExtensionsTests
     {
         // Arrange
         TestCaseData expected = testCaseData.SetDescription(sut.TestCase);
-        object getDescription(TestCaseData testCaseData) => testCaseData.Properties.Get("Description");
+        static object getDescription(TestCaseData testCaseData) => testCaseData.Properties.Get("Description");
 
         // Act
         var actual = sut.ToTestCaseData(argsCode);
