@@ -27,12 +27,14 @@ public sealed class ExtensionsTests
     {
         // Arrange
         TestCaseData expected = testCaseData.SetDescription(sut.TestCase);
+        object getDescription(TestCaseData testCaseData) => testCaseData.Properties.Get("Description");
 
         // Act
         var actual = sut.ToTestCaseData(argsCode);
 
         // Assert
         Xunit.Assert.Equal(expected.Arguments, actual.Arguments);
+        Xunit.Assert.Equal(getDescription(expected), getDescription(actual));
     }
 
     [Xunit.Theory, MemberData(nameof(ToTestCaseDataSetNameTheoryData), MemberType = typeof(ExtensionsTheoryData))]
