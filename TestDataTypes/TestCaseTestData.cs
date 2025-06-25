@@ -8,8 +8,8 @@ namespace CsabaDu.DynamicTestData.NUnit.TestDataTypes;
 /// It inherits from <see cref="TestCaseData"/>
 /// </summary>
 public abstract class TestCaseTestData
-: TestCaseData,
-ITestDataType
+: TestCaseData
+//ITestDataType
 {
     /// <summary>
     /// Initializes a new instance of the <see cref="TestCaseTestData"/> class.
@@ -47,8 +47,6 @@ ITestDataType
         }
     }
 
-    public abstract Type TestDataType { get; }
-
     private static bool IsTestDataReturns(
         ITestData testData,
         [NotNullWhen(true)] out ITestDataReturns? testDataReturns)
@@ -78,10 +76,12 @@ where TTestData : notnull, ITestData
         argsCode,
         testMethodName)
     {
+        Type testDataType = typeof(TTestData);
+
         if (argsCode == ArgsCode.Properties)
         {
             Type[] genericTypes =
-                TestDataType.GetGenericArguments();
+                testDataType.GetGenericArguments();
 
             TypeArgs = HasExpectedResult ?
                 genericTypes[1..]
@@ -89,9 +89,7 @@ where TTestData : notnull, ITestData
         }
         else
         {
-            TypeArgs = [TestDataType];
+            TypeArgs = [testDataType];
         }
     }
-
-    public override Type TestDataType => typeof(TTestData);
 }

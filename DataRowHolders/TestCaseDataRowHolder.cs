@@ -28,30 +28,21 @@ where TTestData : notnull, ITestData
 
     public override IDataRowHolder<TestCaseTestData> GetDataRowHolder(
         IDataStrategy dataStrategy)
-    => new TestCaseDataRowHolder<TTestData>(
-        this,
-        dataStrategy);
+    => dataStrategy.ArgsCode == DataStrategy.ArgsCode ?
+        this
+        : new TestCaseDataRowHolder<TTestData>(
+            this,
+            dataStrategy);
 
-    public IEnumerable<TestCaseTestData>? GetNamedRows(string? testMethodName)
-    => (GetDataRowHolder(DataStrategy) as IEnumerable<ITestDataRow>)
-        ?.Select(tdr => (tdr as INamedTestDataRow<TestCaseTestData>)
-        !.Convert(DataStrategy, testMethodName));
-
-    public IEnumerable<TestCaseTestData>? GetNamedRows(
+    public IEnumerable<TestCaseTestData>? GetRows(
         string? testMethodName,
         ArgsCode? argsCode)
     {
-        if (argsCode.HasValue)
-        {
-            var dataStrategy =
-                GetDataStrategy(argsCode.Value);
-            var dataRowHolder =
-                (GetDataRowHolder(dataStrategy)
-                    as INamedDataRowHolder<TestCaseTestData>);
+        var testDataRows = GetTestDataRows(argsCode);
+        var dataStrategy = GetDataStrategy(argsCode);
 
-            return dataRowHolder?.GetNamedRows(testMethodName);
-        }
-
-        return GetNamedRows(testMethodName);
+        return testDataRows?.Select(
+            tdr => (tdr as INamedTestDataRow<TestCaseTestData>)
+            !.Convert(dataStrategy, testMethodName));
     }
 }

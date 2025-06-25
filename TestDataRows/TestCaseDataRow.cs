@@ -1,8 +1,6 @@
 ﻿// SPDX-License-Identifier: MIT
 // Copyright (c) 2025. Csaba Dudas (CsabaDu)
 
-
-
 namespace CsabaDu.DynamicTestData.NUnit.TestDataRows;
 
 public class TestCaseDataRow<TTestData>(
@@ -10,7 +8,6 @@ public class TestCaseDataRow<TTestData>(
 : TestDataRow<TTestData, TestCaseTestData>(
     testData),
 INamedTestDataRow<TestCaseTestData>
-
 where TTestData : notnull, ITestData
 {
     public TestCaseTestData Convert(IDataStrategy dataStrategy, string? testMethodName)

@@ -20,17 +20,20 @@
     <PackageReleaseNotes>
       
     </PackageReleaseNotes>
-    <Version>2.0.0.0-beta</Version>
+    <Version>2.0.0-beta</Version>
   </PropertyGroup>
 
   <ItemGroup>
+  	<Compile Remove="CsabaDu.DynamicTestData.NUnit.Tests\**" />
     <Compile Remove="_Tests\**" />
+    <EmbeddedResource Remove="CsabaDu.DynamicTestData.NUnit.Tests\**" />
     <EmbeddedResource Remove="_Tests\**" />
+    <None Remove="CsabaDu.DynamicTestData.NUnit.Tests\**" />
     <None Remove="_Tests\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="CsabaDu.DynamicTestData" Version="1.6.8.101" />
+    <PackageReference Include="CsabaDu.DynamicTestData" Version="2.0.7-beta" />
     <PackageReference Include="NUnitLite" Version="4.3.2" />
   </ItemGroup>
 

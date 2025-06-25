@@ -8,17 +8,17 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="CsabaDu.DynamicTestData.DynamicDataSources.DynamicNamedDataSource&lt;TRow&gt;" Collapsed="true">
-    <Position X="0.5" Y="0.5" Width="2.5" />
-    <TypeIdentifier />
-    <Lollipop Position="0.2" />
-  </Class>
   <Class Name="CsabaDu.DynamicTestData.NUnit.DynamicDataSources.DynamicNunitDataSource">
     <Position X="3.5" Y="1.75" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>DynamicDataSources\DynamicNunitDataSource.cs</FileName>
     </TypeIdentifier>
+  </Class>
+  <Class Name="CsabaDu.DynamicTestData.DynamicDataSources.DynamicNamedDataSource&lt;TRow&gt;" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="CsabaDu.DynamicTestData.DynamicDataSources.DynamicObjectArraySource" Collapsed="true">
     <Position X="3.5" Y="0.5" Width="2" />
