@@ -29,7 +29,7 @@ public abstract class TestCaseTestData
     : base(TestDataToParams(
         testData,
         argsCode,
-        IsTestDataReturns(
+        !IsTestDataReturns(
             testData,
             out ITestDataReturns? testDataReturns),
         out string testCaseName))
