@@ -3,7 +3,7 @@
 
 namespace CsabaDu.DynamicTestData.NUnit.DataRowHolders;
 public class TestCaseDataRowHolder<TTestData>
-: DataRowHolder<TTestData, TestCaseTestData>,
+: DataRowHolder<TestCaseTestData, TTestData>,
 INamedDataRowHolder<TestCaseTestData>
 where TTestData : notnull, ITestData
 {
@@ -21,7 +21,7 @@ where TTestData : notnull, ITestData
     {
     }
 
-    public override ITestDataRow<TTestData, TestCaseTestData> CreateTestDataRow(
+    public override ITestDataRow<TestCaseTestData, TTestData> CreateTestDataRow(
         TTestData testData)
     => new TestCaseDataRow<TTestData>(
         testData);

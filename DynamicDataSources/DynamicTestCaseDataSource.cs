@@ -7,7 +7,7 @@ public abstract class DynamicTestCaseDataSource(ArgsCode argsCode)
 : DynamicNamedDataSource<TestCaseTestData>(argsCode, typeof(ITestDataReturns)),
 INamedRows<TestCaseTestData>
 {
-    protected override ITestDataRow<TTestData, TestCaseTestData> CreateTestDataRow<TTestData>(
+    protected override ITestDataRow<TestCaseTestData, TTestData> CreateTestDataRow<TTestData>(
         TTestData testData)
     => new TestCaseDataRow<TTestData>(
         testData);

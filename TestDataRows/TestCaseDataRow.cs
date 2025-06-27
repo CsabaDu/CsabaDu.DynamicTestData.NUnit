@@ -5,7 +5,7 @@ namespace CsabaDu.DynamicTestData.NUnit.TestDataRows;
 
 public class TestCaseDataRow<TTestData>(
     TTestData testData)
-: TestDataRow<TTestData, TestCaseTestData>(
+: TestDataRow<TestCaseTestData, TTestData>(
     testData),
 INamedTestDataRow<TestCaseTestData>
 where TTestData : notnull, ITestData
@@ -19,7 +19,7 @@ where TTestData : notnull, ITestData
     public override TestCaseTestData Convert(IDataStrategy dataStrategy)
     => Convert(dataStrategy, null);
 
-    public override ITestDataRow<TTestData, TestCaseTestData> CreateTestDataRow(
+    public override ITestDataRow<TestCaseTestData, TTestData> CreateTestDataRow(
         TTestData testData)
     => new TestCaseDataRow<TTestData>(
         testData);
