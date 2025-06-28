@@ -4,4 +4,4 @@
 namespace CsabaDu.DynamicTestData.NUnit.DynamicDataSources;
 
 public abstract class DynamicNunitDataSource(ArgsCode argsCode)
-: DynamicObjectArraySource(argsCode, typeof(ITestDataReturns));
+: DynamicObjectArraySource(argsCode, typeof(IExpected));
