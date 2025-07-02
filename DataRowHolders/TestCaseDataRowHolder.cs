@@ -38,7 +38,7 @@ where TTestData : notnull, ITestData
         string? testMethodName,
         ArgsCode? argsCode)
     {
-        var testDataRows = GetTestDataRows(argsCode);
+        var testDataRows = GetTestDataRows();
         var dataStrategy = GetDataStrategy(argsCode);
 
         return testDataRows?.Select(
