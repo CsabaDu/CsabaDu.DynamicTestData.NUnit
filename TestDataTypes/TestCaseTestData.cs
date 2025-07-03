@@ -41,7 +41,7 @@ public abstract class TestCaseTestData
             TestName = GetDisplayName(testMethodName, testCaseName);
         }
 
-        if (testDataReturns != null)
+        if (testDataReturns is not null)
         {
             ExpectedResult = testDataReturns.GetExpected();
         }
@@ -52,7 +52,7 @@ public abstract class TestCaseTestData
         [NotNullWhen(true)] out ITestDataReturns? testDataReturns)
     {
         testDataReturns = testData as ITestDataReturns;
-        return testData as ITestDataReturns != null;
+        return testData as ITestDataReturns is not null;
     }
 }
 
