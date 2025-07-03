@@ -1,6 +1,8 @@
 ﻿// SPDX-License-Identifier: MIT
 // Copyright (c) 2025. Csaba Dudas (CsabaDu)
 
+using CsabaDu.DynamicTestData.NUnit.Statics;
+
 namespace CsabaDu.DynamicTestData.NUnit.TestDataTypes;
 
 /// <summary>
@@ -9,7 +11,6 @@ namespace CsabaDu.DynamicTestData.NUnit.TestDataTypes;
 /// </summary>
 public abstract class TestCaseTestData
 : TestCaseData
-//ITestDataType
 {
     /// <summary>
     /// Initializes a new instance of the <see cref="TestCaseTestData"/> class.
@@ -29,9 +30,7 @@ public abstract class TestCaseTestData
     : base(TestDataToParams(
         testData,
         argsCode,
-        !IsTestDataReturns(
-            testData,
-            out ITestDataReturns? testDataReturns),
+        !testData.IsReturns(out ITestDataReturns? testDataReturns),
         out string testCaseName))
     {
         Properties.Set(PropertyNames.Description, testCaseName);
@@ -45,14 +44,6 @@ public abstract class TestCaseTestData
         {
             ExpectedResult = testDataReturns.GetExpected();
         }
-    }
-
-    private static bool IsTestDataReturns(
-        ITestData testData,
-        [NotNullWhen(true)] out ITestDataReturns? testDataReturns)
-    {
-        testDataReturns = testData as ITestDataReturns;
-        return testData as ITestDataReturns is not null;
     }
 }
 
