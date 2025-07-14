@@ -18,9 +18,4 @@ where TTestData : notnull, ITestData
 
     public override TestCaseTestData Convert(IDataStrategy dataStrategy)
     => Convert(dataStrategy, null);
-
-    public override ITestDataRow<TestCaseTestData, TTestData> CreateTestDataRow(
-        TTestData testData)
-    => new TestCaseDataRow<TTestData>(
-        testData);
 }
