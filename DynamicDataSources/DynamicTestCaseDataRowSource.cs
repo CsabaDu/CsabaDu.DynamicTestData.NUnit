@@ -3,7 +3,7 @@
 
 namespace CsabaDu.DynamicTestData.NUnit.DynamicDataSources;
 
-public abstract class DynamicTestCaseDataSource(ArgsCode argsCode)
+public abstract class DynamicTestCaseDataRowSource(ArgsCode argsCode)
 : DynamicNamedDataRowSource<TestCaseTestData>(argsCode, PropertyCode.Returns),
 INamedRows<TestCaseTestData>
 {
