@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="CsabaDu.DynamicTestData.NUnit.DynamicDataSources.DynamicTestCaseDataRowSource">
+  <Class Name="CsabaDu.DynamicTestData.NUnit.DynamicDataSources.DynamicTestCaseTestDataRowSource">
     <Position X="0.75" Y="1.75" Width="3.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
-      <FileName>DynamicDataSources\DynamicTestCaseDataRowSource.cs</FileName>
+      <FileName>DynamicDataSources\DynamicTestCaseTestDataRowSource.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>

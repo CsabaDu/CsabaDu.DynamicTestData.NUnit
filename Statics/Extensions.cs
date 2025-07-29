@@ -5,15 +5,6 @@ namespace CsabaDu.DynamicTestData.NUnit.Statics;
 
 public static class Extensions
 {
-    public static IEnumerable<TTestCaseData>? GetRows<TTestCaseData>(
-        this IDataStrategy dataStrategy,
-        IEnumerable<ITestDataRow>? testDataRows,
-        string? testMethodName)
-    where TTestCaseData : TestCaseData
-    => testDataRows?.Select(
-        tdr => (tdr as INamedTestDataRow<TTestCaseData>)
-        !.Convert(dataStrategy, testMethodName));
-
     public static bool IsReturns(
         this ITestData testData,
         [NotNullWhen(true)] out ITestDataReturns? testDataReturns)

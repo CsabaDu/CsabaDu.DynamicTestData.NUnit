@@ -3,8 +3,7 @@
 
 namespace CsabaDu.DynamicTestData.NUnit.DataRowHolders;
 public class TestCaseTestDataRowHolder<TTestData>
-: DataRowHolder<TestCaseTestData, TTestData>,
-INamedDataRowHolder<TestCaseTestData>
+: NamedDataRowHolder<TestCaseTestData, TTestData>
 where TTestData : notnull, ITestData
 {
     public TestCaseTestDataRowHolder(
@@ -33,21 +32,4 @@ where TTestData : notnull, ITestData
         : new TestCaseTestDataRowHolder<TTestData>(
             this,
             dataStrategy);
-
-    public IEnumerable<TestCaseTestData>? GetRows(
-        string? testMethodName,
-        ArgsCode? argsCode)
-    => GetDataStrategy(argsCode)
-        .GetRows<TestCaseTestData>(
-            GetTestDataRows(),
-            testMethodName);
-
-    public IEnumerable<TestCaseTestData>? GetRows(
-        string? testMethodName,
-        ArgsCode? argsCode,
-        PropertyCode? propertyCode)
-    => GetDataStrategy(argsCode, propertyCode)
-        .GetRows<TestCaseTestData>(
-            GetTestDataRows(),
-            testMethodName);
 }
