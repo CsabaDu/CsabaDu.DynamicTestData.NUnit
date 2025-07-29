@@ -37,12 +37,19 @@ where TTestData : notnull, ITestData
     public IEnumerable<TestCaseTestData>? GetRows(
         string? testMethodName,
         ArgsCode? argsCode)
-    {
-        var testDataRows = GetTestDataRows();
-        var dataStrategy = GetDataStrategy(argsCode);
+    => NamedDataRowHolder.GetRows(
+        this,
+        testMethodName,
+        argsCode,
+        null);
 
-        return testDataRows?.Select(
-            tdr => (tdr as INamedTestDataRow<TestCaseTestData>)
-            !.Convert(dataStrategy, testMethodName));
-    }
+    public IEnumerable<TestCaseTestData>? GetRows(
+        string? testMethodName,
+        ArgsCode? argsCode,
+        PropertyCode? propertyCode)
+    => NamedDataRowHolder.GetRows(
+        this,
+        testMethodName,
+        argsCode,
+        propertyCode);
 }

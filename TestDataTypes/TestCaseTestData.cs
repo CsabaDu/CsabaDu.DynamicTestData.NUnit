@@ -30,7 +30,7 @@ public abstract class TestCaseTestData
     : base(TestDataToParams(
         testData,
         argsCode,
-        !testData.IsReturns(out ITestDataReturns? testDataReturns),
+        PropertyCode.Throws,
         out string testCaseName))
     {
         Properties.Set(PropertyNames.Description, testCaseName);
@@ -40,7 +40,7 @@ public abstract class TestCaseTestData
             TestName = GetDisplayName(testMethodName, testCaseName);
         }
 
-        if (testDataReturns is not null)
+        if (testData.IsReturns(out ITestDataReturns? testDataReturns))
         {
             ExpectedResult = testDataReturns.GetExpected();
         }
