@@ -4,7 +4,7 @@
 namespace CsabaDu.DynamicTestData.NUnit.DynamicDataSources;
 
 public abstract class DynamicTestCaseTestDataRowSource(ArgsCode argsCode)
-: DynamicNamedDataRowSource<TestCaseTestData>(argsCode, PropertyCode.Returns),
+: DynamicNamedDataRowSource<TestCaseTestData>(argsCode, PropsCode.Returns),
 INamedRows<TestCaseTestData>
 {
     protected override void InitDataHolder<TTestData>(

@@ -30,7 +30,7 @@ public abstract class TestCaseTestData
     : base(TestDataToParams(
         testData,
         argsCode,
-        PropertyCode.Throws,
+        PropsCode.Throws,
         out string testCaseName))
     {
         Properties.Set(PropertyNames.Description, testCaseName);

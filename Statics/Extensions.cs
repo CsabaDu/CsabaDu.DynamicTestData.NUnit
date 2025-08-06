@@ -26,7 +26,7 @@ public static class Extensions
         var parameters = TestDataToParams(
             testData,
             argsCode,
-            PropertyCode.Throws,
+            PropsCode.Throws,
             out string testCaseName);
 
         var testCaseData = new TestCaseData(parameters)
