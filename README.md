@@ -18,7 +18,7 @@
 
 ---
 
-## 📖 Documentation
+## Documentation
 
 This README and the [dedicated Wiki](https://github.com/CsabaDu/CsabaDu.DynamicTestData.NUnit/wiki) for the **CsabaDu.DynamicTestData.NUnit** extension are currently under development. While full documentation is in progress, you can already find essential information and usage guidance.
 
