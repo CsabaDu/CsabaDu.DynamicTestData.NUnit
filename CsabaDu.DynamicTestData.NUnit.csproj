@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>Dynamic Test Data NUnit</Title>
     <Company>CsabaDu</Company>
-    <Description>Lightweight, robust type-safe C# framework designed to facilitate dynamic data-driven testing in NUnit framework, by providing a simple and intuitive way to generate `TestCaseData` instances or object arrays at runtime, based on `CsabaDu.DynamicTestData` features.</Description>
+    <Description>An extension of CsabaDu.DynamicTestData framework to facilitate dynamic data-driven testing in NUnit.</Description>
     <Copyright>(c) 2025. Csaba Dudas (CsabaDu)</Copyright>
     <PackageIcon>icon.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
@@ -16,9 +16,9 @@
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <IncludeSymbols>True</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <PackageTags>dynamic; unit; test; data; driven; nunit; TestCaseData</PackageTags>
+    <PackageTags>dynamic; unit; test; data; driven; typesafe; threadsafe; extensible; nunit; modular; TestCaseData</PackageTags>
     <PackageReleaseNotes>
-      
+      This is a beta release introducing breaking changes, new features, and architectural enhancements to the `CsabaDu.DynamicTestData.NUnit` library. These updates improve usability, flexibility, and extensibility.
     </PackageReleaseNotes>
     <Version>2.0.0-beta</Version>
   </PropertyGroup>
