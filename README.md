@@ -30,9 +30,7 @@ For an overview of this NUnit-specific extension—including its purpose, integr
 
 ## Version 2.0.0-beta Foreword
 
-The `CsabaDu.DynamicTestData` framework has undergone a major transformation in version **2.0.0-beta**, introducing a wide range of enhancements while preserving its original foundation.
-
-The core components from the 1.x.x series — particularly the `TestDataTypes.*` namespaces and the `DynamicDataSource` class — remain central to the framework. However, even these familiar types have received **small but breaking changes** to align with the new architecture.
+The `CsabaDu.DynamicTestData.NUnit` framework has undergone a major transformation in version **2.0.0-beta**, introducing a wide range of enhancements while preserving its original foundation.
 
 This release introduces powerful new capabilities:
 - **Test data conversion** to any type of test data row
@@ -62,22 +60,22 @@ This version is beta, meaning:
 > This is a **beta release** introducing **breaking changes**, new features, and architectural enhancements to the `CsabaDu.DynamicTestData.NUnit` library. These updates improve usability, flexibility, and extensibility.
 
 - **Cancelled**:
-  - DynamicDataSources namespace:
+  - **DynamicDataSources** namespace:
     - `DynamicTestCaseDataSource` abstract class
 - **Changed**:
-  - Statics namespace:
-    - `Extensions` static class
+  - **Statics** namespace:
+    - `*Extensions*` static class
 - **Added**:
-  - TestDataTypes namespace:
+  - **TestDataTypes** namespace:
     - `TestCaseTestData` abstract class
     - `TestCaseTestData<TTestData>` sealed class
-  - TestDataRows namespace:
+  - **TestDataRows** namespace:
     - `TestCaseDataRow<TTestData>` class
     - `TestCaseTestDataRow<TTestData>` class
-  - DataRowHolders namespace:
+  - **DataRowHolders** namespace:
     - `TestCaseDataRowHolder<TTestData>` class
     - `TestCaseTestDataRowHolder<TTestData>` class
-  - DynamicDataSources namespace:
+  - **DynamicDataSources** namespace:
     - `DynamicTestCaseDataRowSource` abstract class
     - `DynamicTestCaseTestDataRowSource` abstract class
 
@@ -105,14 +103,22 @@ This version is beta, meaning:
 
 ---
 
+## Contributing
+
+Contributions are welcome! Please submit a pull request or open an issue if you have any suggestions or bug reports.
+
+---
 ## License
 
 This project is licensed under the MIT License. See the [License](LICENSE.txt) file for details.
 
 ---
-
 ## Contact
 
 For any questions or inquiries, please contact [CsabaDu](https://github.com/CsabaDu).
 
 ---
+## FAQ
+
+---
+## Troubleshooting

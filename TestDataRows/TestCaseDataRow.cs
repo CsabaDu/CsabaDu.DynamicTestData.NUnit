@@ -3,10 +3,8 @@
 
 namespace CsabaDu.DynamicTestData.NUnit.TestDataRows;
 
-public class TestCaseDataRow<TTestData>(
-    TTestData testData)
-: TestDataRow<TestCaseData, TTestData>(
-    testData),
+public class TestCaseDataRow<TTestData>(TTestData testData)
+: TestDataRow<TestCaseData, TTestData>(testData),
 INamedTestDataRow<TestCaseData>
 where TTestData : notnull, ITestData
 {
