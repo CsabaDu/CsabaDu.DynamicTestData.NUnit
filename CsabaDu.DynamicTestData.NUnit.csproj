@@ -11,7 +11,7 @@
     <Copyright>(c) 2025. Csaba Dudas (CsabaDu)</Copyright>
     <PackageIcon>icon.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <RepositoryUrl>https://github.com/CsabaDu/CsabaDu.DynamicTestData/tree/master/_NUnit</RepositoryUrl>
+    <RepositoryUrl>https://github.com/CsabaDu/CsabaDu.DynamicTestData.NUnit</RepositoryUrl>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <IncludeSymbols>True</IncludeSymbols>
