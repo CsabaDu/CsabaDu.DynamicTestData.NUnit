@@ -1,14 +1,15 @@
 ﻿// SPDX-License-Identifier: MIT
 // Copyright (c) 2025. Csaba Dudas (CsabaDu)
 
+using CsabaDu.DynamicTestData.TestDataRows;
+
 namespace CsabaDu.DynamicTestData.NUnit.TestDataRows;
 
 public class TestCaseDataRow<TTestData>(TTestData testData)
-: TestDataRow<TestCaseData, TTestData>(testData),
-INamedTestDataRow<TestCaseData>
+: NamedTestDataRow<TestCaseData, TTestData>(testData)
 where TTestData : notnull, ITestData
 {
-    public TestCaseData Convert(IDataStrategy dataStrategy, string? testMethodName)
+    public override TestCaseData Convert(IDataStrategy dataStrategy, string? testMethodName)
     => new TestCaseTestData<TTestData>(
         TestData,
         dataStrategy.ArgsCode,

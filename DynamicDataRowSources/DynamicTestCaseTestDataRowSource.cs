@@ -1,7 +1,7 @@
 ﻿// SPDX-License-Identifier: MIT
 // Copyright (c) 2025. Csaba Dudas (CsabaDu)
 
-namespace CsabaDu.DynamicTestData.NUnit.DynamicDataSources;
+namespace CsabaDu.DynamicTestData.NUnit.DynamicDataRowSources;
 
 public abstract class DynamicTestCaseTestDataRowSource(ArgsCode argsCode)
 : DynamicNamedDataRowSource<TestCaseTestData>(argsCode, PropsCode.Returns)

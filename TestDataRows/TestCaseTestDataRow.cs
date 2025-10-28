@@ -4,11 +4,10 @@
 namespace CsabaDu.DynamicTestData.NUnit.TestDataRows;
 
 public class TestCaseTestDataRow<TTestData>(TTestData testData)
-: TestDataRow<TestCaseTestData, TTestData>(testData),
-INamedTestDataRow<TestCaseTestData>
+: NamedTestDataRow<TestCaseTestData, TTestData>(testData)
 where TTestData : notnull, ITestData
 {
-    public TestCaseTestData Convert(IDataStrategy dataStrategy, string? testMethodName)
+    public override TestCaseTestData Convert(IDataStrategy dataStrategy, string? testMethodName)
     => new TestCaseTestData<TTestData>(
         TestData,
         dataStrategy.ArgsCode,

@@ -81,6 +81,13 @@ This version is beta, meaning:
 
 ---
 
+#### **Version 2.0.1-beta** (2025-09-20)
+
+- **Changed**:
+  - **`*TestDataRows.TestCaseDataRow<TTestData>`**
+   - Inheritance updated to `NamedTestDataRow<TestCaseData, TTestData>`.
+   - `TestCaseData Convert(IDataStrategy, string?)` method made `override`.
+
 ### **Version 1.0.0** (2025-03-13)  
 - Initial release of the *CsabaDu.DynamicTestData.NUnit* framework, which is a child of **CsabaDu.DynamicTestData** framework.  
 - Includes the `DynamicTestCaseDataSource` base class.  

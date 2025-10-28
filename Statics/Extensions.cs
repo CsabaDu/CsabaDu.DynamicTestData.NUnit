@@ -52,8 +52,7 @@ public static class Extensions
         }
 
         return isReturns ?
-            testCaseData.Returns(
-                testDataReturns!.GetExpected())
+            testCaseData.Returns(testDataReturns!.GetExpected())
             : testCaseData;
     }
 

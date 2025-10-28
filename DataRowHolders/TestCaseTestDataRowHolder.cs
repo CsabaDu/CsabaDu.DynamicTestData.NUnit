@@ -2,6 +2,7 @@
 // Copyright (c) 2025. Csaba Dudas (CsabaDu)
 
 namespace CsabaDu.DynamicTestData.NUnit.DataRowHolders;
+
 public class TestCaseTestDataRowHolder<TTestData>
 : NamedDataRowHolder<TestCaseTestData, TTestData>
 where TTestData : notnull, ITestData
