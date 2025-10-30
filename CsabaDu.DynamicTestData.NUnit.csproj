@@ -36,7 +36,7 @@
 
   <ItemGroup>
     <PackageReference Include="CsabaDu.DynamicTestData" Version="2.1.0-beta" />
-    <PackageReference Include="NUnitLite" Version="4.4.0" />
+    <PackageReference Include="CsabaDu.DynamicTestData.NUnit.Lite" Version="1.0.1-beta" />
   </ItemGroup>
 
   <ItemGroup>
