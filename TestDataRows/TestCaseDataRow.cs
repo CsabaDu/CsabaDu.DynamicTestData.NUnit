@@ -8,8 +8,7 @@ public class TestCaseDataRow<TTestData>(TTestData testData)
 where TTestData : notnull, ITestData
 {
     public override TestCaseData Convert(IDataStrategy dataStrategy, string? testMethodName)
-    => new TestCaseTestData<TTestData>(
-        TestData,
+    => TestData.ToTestCaseTestData(
         dataStrategy.ArgsCode,
         testMethodName);
 
