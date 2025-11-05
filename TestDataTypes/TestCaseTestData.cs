@@ -70,12 +70,12 @@ where TTestData : notnull, ITestData
         TypeArgs = argsCode switch
         {
             ArgsCode.Instance => [testDataType],
-            ArgsCode.Properties => getGenericTypes(),
+            ArgsCode.Properties => getGenericArgs(),
             _ => null,
         };
 
         #region Local methods
-        Type[] getGenericTypes()
+        Type[] getGenericArgs()
         {
             var genericArgs =
                 testDataType.GetGenericArguments();
