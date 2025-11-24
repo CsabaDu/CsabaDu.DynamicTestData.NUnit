@@ -25,8 +25,7 @@ public abstract class TestCaseTestData
         ITestData testData,
         ArgsCode argsCode,
         string? testMethodName)
-    : base(TestDataToParams(
-        testData,
+    : base(testData.ToParams(
         argsCode,
         PropsCode.Throws,
         out string testCaseName))

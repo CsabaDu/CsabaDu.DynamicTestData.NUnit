@@ -22,7 +22,7 @@
     - Inheritance updated to `NamedTestDataRow&gt;`.
     - `TestCaseData Convert(IDataStrategy, string?)` method made `override`.
     </PackageReleaseNotes>
-    <Version>2.2.2-beta</Version>
+    <Version>2.2.3-beta</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -35,7 +35,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="CsabaDu.DynamicTestData" Version="2.2.2-beta" />
     <PackageReference Include="NUnitLite" Version="4.4.0" />
   </ItemGroup>
 
@@ -64,6 +63,10 @@
     <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
       <_Parameter1>CsabaDu.DynamicTestData.NUnit.Tests</_Parameter1>
     </AssemblyAttribute>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CsabaDu.DynamicTestData\CsabaDu.DynamicTestData.csproj" />
   </ItemGroup>
 
 </Project>
