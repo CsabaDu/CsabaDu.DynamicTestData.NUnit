@@ -27,7 +27,7 @@ public abstract class TestCaseTestData
         string? testMethodName)
     : base(testData.ToParams(
         argsCode,
-        PropsCode.Throws,
+        PropsCode.Returns,
         out string testCaseName))
     {
         Properties.Set(PropertyNames.Description, testCaseName);
