@@ -22,7 +22,7 @@
     - Inheritance updated to `NamedTestDataRow&gt;`.
     - `TestCaseData Convert(IDataStrategy, string?)` method made `override`.
     </PackageReleaseNotes>
-    <Version>2.2.3-beta</Version>
+    <Version>2.2.4-beta</Version>
   </PropertyGroup>
 
   <ItemGroup>
